@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kodaň 13.–16. 11. 2026</title>
+<meta name="description" content="Itinerář rodinného výletu do Kodaně: doprava, ubytování, MHD, atrakce a rozpočet.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Rodinný výlet · 2 dospělí + 2 kluci (9 let)</p>
+    <h1>Kodaň 2026</h1>
+    <p class="dates">Pá 13. 11. – Po 16. 11. 2026 <span class="muted">(varianta B: do Út 17. 11.)</span></p>
+    <nav class="toc">
+      <a href="#prehled">Přehled</a>
+      <a href="#doprava">Doprava</a>
+      <a href="#ubytovani">Ubytování</a>
+      <a href="#mhd">MHD</a>
+      <a href="#itinerar">Itinerář</a>
+      <a href="#atrakce">Atrakce</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#rozpocet">Rozpočet</a>
+      <a href="#rezervace">Co rezervovat</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ PŘEHLED ============ -->
+<section id="prehled">
+  <h2>Přehled</h2>
+  <div class="facts">
+    <div class="fact"><span class="lbl">Odlet</span><strong>Pá 13. 11. ~13:45</strong><span>Norwegian, Praha → Kodaň</span></div>
+    <div class="fact"><span class="lbl">Návrat</span><strong>Po 16. 11. 17:20</strong><span>SAS, Kodaň → Praha 18:40</span></div>
+    <div class="fact"><span class="lbl">Ubytování</span><strong>3 noci</strong><span>u metra, rodinný pokoj / byt</span></div>
+    <div class="fact"><span class="lbl">Odhad celkem</span><strong id="factTotal">—</strong><span>viz <a href="#rozpocet">rozpočet</a></span></div>
+  </div>
+
+  <div class="callouts">
+    <div class="callout good"><strong>Tivoli je otevřené.</strong> Vánoční sezóna „Jul i Tivoli“ začíná přesně v pátek 13. 11. 2026 (do 3. 1. 2027). Mezi 2. a 12. 11. je zavřeno, takže termín vychází ideálně.</div>
+    <div class="callout warn"><strong>Lodě na Holmenu (F352 Peder Skram) mají v listopadu zavřeno.</strong> Poslední otevírací dny v roce 2026 byly 10.–18. 10. Fregatu ale uvidíte z nábřeží; je zařazená do nedělní procházky.</div>
+    <div class="callout warn"><strong>Pondělí:</strong> Rosenborg je v pondělí zavřený. Den Blå Planet má naopak v pondělí otevřeno až do 21:00.</div>
+    <div class="callout info"><strong>Počasí:</strong> v polovině listopadu 3–8 °C, vítr, často déšť. Slunce zapadá kolem 16:05. Vyhlídková věž Vor Frelsers Kirke se za deště a silného větru zavírá. Pro deštivý den je připravený plán B (Experimentarium / planetárium).</div>
+  </div>
+</section>
+
+<!-- ============ DOPRAVA ============ -->
+<section id="doprava">
+  <h2>Doprava</h2>
+
+  <h3>1. Lípa nad Orlicí → letiště Praha</h3>
+  <div class="grid2">
+    <div class="card pad">
+      <ul class="kv">
+        <li><span>Trasa</span>I/11 → Hradec Králové → D11 → D0 (jižní okruh) → Ruzyně</li>
+        <li><span>Vzdálenost</span>cca 156 km</li>
+        <li><span>Čas</span>1:50–2:10 h, v pátek kolem poledne počítejte s 2,5 h</li>
+        <li><span>Palivo</span>cca 400 Kč jedna cesta (6,5 l/100 km, ~37 Kč/l)</li>
+        <li><span>Terminál</span>Terminál 2 (lety do Schengenu)</li>
+      </ul>
+      <p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=L%C3%ADpa+nad+Orlic%C3%AD&destination=Leti%C5%A1t%C4%9B+V%C3%A1clava+Havla+Praha+Termin%C3%A1l+2&travelmode=driving">Trasa v Google Maps</a></p>
+    </div>
+    <div class="card pad">
+      <h4>Parkování na 4 dny</h4>
+      <table class="mini">
+        <tr><th>Varianta</th><th>Cena (odhad)</th><th></th></tr>
+        <tr class="rec"><td><strong>AeroParking PA Smart / PB Economy</strong> (oficiální, online)</td><td>~700–1 000 Kč</td><td>2–3 min pěšky na T2 ✔</td></tr>
+        <tr><td>AeroParking PD Holiday</td><td>~600–900 Kč</td><td>~10 min pěšky</td></tr>
+        <tr><td>Soukromá parkoviště s kyvadlovým autobusem (Fixparking, PRG Parking, Flexi…)</td><td>~500–800 Kč</td><td>čekání na shuttle</td></tr>
+        <tr><td>P+R Zličín + bus 100</td><td>~770 Kč</td><td>nevýhodné</td></tr>
+      </table>
+      <p class="small">Doporučení: <strong>PA Smart nebo PB Economy, rezervovat online co nejdřív</strong>. Online je to vždy levnější než na místě (na místě 1 150–2 600 Kč). Cena je skoro stejná jako u soukromých parkovišť a s dětmi a kufry dojdete na terminál pěšky. <a target="_blank" rel="noopener" href="https://aeroparking.cz/">aeroparking.cz</a></p>
+    </div>
+  </div>
+
+  <h3>2. Lety (přímé)</h3>
+  <p>Přímo létají jen <strong>SAS, Norwegian a Ryanair</strong>. Ryanair vynecháváme. Norwegian létá v zimě jen asi 4× týdně (Po, Čt, Pá, Ne). V úterý létá pouze SAS.</p>
+  <div class="grid2">
+    <div class="card pad flight">
+      <span class="tag">TAM · Pá 13. 11.</span>
+      <h4>Norwegian (D8) · PRG 13:45 → CPH 15:05</h4>
+      <p class="small">Tarif <strong>LowFare + příplatek za kabinový kufr</strong> (55×40×23 cm, 10 kg, ~150–300 Kč/os.). V LowFare je jen osobní věc pod sedadlo (40×30×20). LowFare+ obvykle vyjde dráž.</p>
+      <p class="small"><strong>Záloha:</strong> SAS ~15:10 → 16:30 (Go Light + kabinový kufr).</p>
+      <p class="small warnText">Časy vycházejí ze zimního letového řádu na Kayaku. Před nákupem ověřte, že Norwegian v pátek 13. 11. opravdu letí.</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.norwegian.com/cz/">norwegian.com</a>
+    </div>
+    <div class="card pad flight">
+      <span class="tag">ZPĚT · Po 16. 11.</span>
+      <h4>SAS · CPH 17:20 → PRG 18:40</h4>
+      <p class="small">Tarif <strong>Go Light + kabinový kufr</strong> (8 kg, ~€12–20/os.). Je to jediný přímý let v podvečer. Norwegian letí v pondělí jen kolem poledne (11:45).</p>
+      <p class="small"><strong>Varianta B (Út 17. 11.):</strong> stejný let SAS v 17:20. Úterý bývá o 5–10 % levnější, ale přidá noc ubytování (~4 500 Kč), jídlo a den MHD. Vyplatí se jen kvůli dni navíc, ne kvůli ceně.</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.flysas.com/">flysas.com</a>
+    </div>
+  </div>
+  <p class="small muted">Ani jedna aerolinka nedává dětem 2–11 let slevu, počítejte s plnou cenou. Jednosměrné letenky stojí polovinu zpáteční, takže kombinace Norwegian tam + SAS zpět nic nestojí navíc. Kabinové kufry přikupte hned při rezervaci, později jsou dražší. Odhad: <strong>~3 000 Kč na osobu za oba lety včetně kufrů</strong> (rozpětí 2 300–4 100 Kč). Ceny před odletem rostou, kupujte co nejdřív.</p>
+
+  <h3>3. Letiště Kodaň → ubytování</h3>
+  <p>Po příletu (Terminál 2/3) vás čeká druhý dospělý. Metro <strong>M2</strong> jezdí přímo z letiště každé 4–6 min a do centra (Christianshavn / Kongens Nytorv) jede 13–15 min. Lístek kryje City Pass, viz <a href="#mhd">MHD</a>.</p>
+</section>
+
+<!-- ============ UBYTOVÁNÍ ============ -->
+<section id="ubytovani">
+  <h2>Ubytování</h2>
+  <p>Rozpočet <strong>do 15 000 Kč</strong> je ≈ 4 600 DKK, tedy asi 1 500 DKK/noc při 3 nocích. Ceny níže jsou odhady, aktuální ceny na listopad se nepodařilo ověřit. Víkend otevření Tivoli může ceny zvednout, <strong>rezervujte brzy</strong> (ideálně s bezplatným stornem).</p>
+  <div class="hotels">
+    <div class="card pad hotel rec">
+      <span class="tag">Doporučeno: poloha</span>
+      <h4>Generator Copenhagen</h4>
+      <p class="small">Adelgade 5–7, centrum · <strong>metro Kongens Nytorv (M1–M4)</strong>, 1 přestup z letiště, ~15 min</p>
+      <p class="small">Soukromý 4lůžkový pokoj s koupelnou. Pěšky 5 min do Nyhavnu, 10 min na Broens a Christianshavn. Snídaně za příplatek.</p>
+      <p class="price">~1 000–1 500 DKK / noc</p>
+      <a target="_blank" rel="noopener" href="https://staygenerator.com/hostels/copenhagen">web</a> · <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Generator+Copenhagen">mapa</a>
+    </div>
+    <div class="card pad hotel rec">
+      <span class="tag">Doporučeno: u Tivoli</span>
+      <h4>Urban House Copenhagen</h4>
+      <p class="small">Colbjørnsensgade 5–11, Vesterbro · <strong>København H (M3 + vlak z letiště 13 min přímo)</strong></p>
+      <p class="small">Soukromé 4lůžkové pokoje. Hned vedle Tivoli, autobus 6A do ZOO staví za rohem.</p>
+      <p class="price">~900–1 400 DKK / noc</p>
+      <a target="_blank" rel="noopener" href="https://urbanhouse.me/">web</a> · <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Urban+House+Copenhagen">mapa</a>
+    </div>
+    <div class="card pad hotel">
+      <span class="tag">Nejlevnější</span>
+      <h4>CABINN Metro</h4>
+      <p class="small">Arne Jacobsens Allé 2, Ørestad · <strong>přímo u metra Ørestad (M1)</strong>, 10 min do centra</p>
+      <p class="small">Rodinná „kajuta“ pro 4 s palandami, velmi malá. Snídaně za příplatek. Nejlepší volba pro variantu B se 4 nocemi.</p>
+      <p class="price">~900–1 200 DKK / noc</p>
+      <a target="_blank" rel="noopener" href="https://www.cabinn.com/en/hotel/cabinn-metro">web</a> · <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=CABINN+Metro+Copenhagen">mapa</a>
+    </div>
+    <div class="card pad hotel">
+      <span class="tag">S kuchyní</span>
+      <h4>Airbnb: byt 2+kk</h4>
+      <p class="small">Hledejte v lokalitách <strong>Christianshavn, Islands Brygge, Amager (Amagerbro, Lergravsparken)</strong> na lince M1/M2. Přímý spoj z letiště, žádný přestup.</p>
+      <p class="small">Vlastní kuchyně ušetří za snídaně a večeře (Netto, Rema 1000, Lidl). Pozor na úklidový poplatek.</p>
+      <p class="price">~1 000–1 600 DKK / noc + úklid</p>
+      <a target="_blank" rel="noopener" href="https://www.airbnb.com/s/Copenhagen/homes?checkin=2026-11-13&checkout=2026-11-16&adults=2&children=2">hledat na Airbnb</a>
+    </div>
+  </div>
+  <p class="small muted">Také prověřeno: Steel House nepřijímá děti do 12 let. Hotel Ottilia a Adina Apartments stojí obvykle přes 2 000 DKK/noc. Four Points Flex Arena (Ørestad) je dobrá alternativa, ale rodinný pokoj není ověřený.</p>
+</section>
+
+<!-- ============ MHD ============ -->
+<section id="mhd">
+  <h2>MHD v Kodani</h2>
+  <div class="grid2">
+    <div class="card pad">
+      <h4>Co koupit: 2× City Pass Small 96 h</h4>
+      <ul>
+        <li>Aplikace <strong>Rejsebillet</strong> (iOS/Android), na jednom telefonu může být víc jízdenek. Prodávají ho i automaty v metru.</li>
+        <li><strong>Každý dospělý veze zdarma 2 děti do 12 let</strong>, takže kluci nic neplatí.</li>
+        <li>Zóny 1–4 včetně letiště. Platí metro, S-vlaky, autobusy i přístavní lodní autobus.</li>
+        <li>Pro variantu A stačí i 72 h, ale vyprší v pondělí přesně v hodinu aktivace (~15:30) a pak už nedojedete z Dragøru na letiště. 96 h stojí jen o 60 DKK víc a pokryje i variantu B.</li>
+      </ul>
+      <table class="mini">
+        <tr><th>City Pass Small</th><th>24 h</th><th>48 h</th><th>72 h</th><th>96 h</th><th>120 h</th></tr>
+        <tr><td>dospělý</td><td>100</td><td>160</td><td>220</td><td class="hl">280</td><td>340 DKK</td></tr>
+      </table>
+      <p class="small"><strong>2 × 280 DKK = 560 DKK (~1 820 Kč)</strong> za celou skupinu. <a target="_blank" rel="noopener" href="https://dinoffentligetransport.dk/en/find-tickets/day-tickets/city-pass">dinoffentligetransport.dk</a> · vyhledávání spojů: <a target="_blank" rel="noopener" href="https://www.rejseplanen.dk/">Rejseplanen</a></p>
+    </div>
+    <div class="card pad">
+      <h4>Copenhagen Card: nevyplatí se</h4>
+      <p class="small">DISCOVER 72 h stojí 1 039 DKK pro dospělého a 180 DKK pro dítě (3–11). Pro rodinu je to <strong>2 438 DKK</strong>, a zahrnuje MHD, vstup do Tivoli (ale ne atrakce) a ZOO. <strong>Den Blå Planet už v kartě není.</strong></p>
+      <p class="small">Totéž zaplacené zvlášť (MHD + vstup do Tivoli + ZOO) vyjde asi 2 100 DKK. Karta by se vyplatila jen s dalšími 3–4 placenými muzei denně, což s dětmi nedává smysl.</p>
+      <p class="small muted">Dánsko je prakticky bezhotovostní, stačí platební karta nebo telefon. Kurz ČNB k 16. 10. 2026: 1 DKK = 3,254 Kč, 1 EUR = 24,325 Kč.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ITINERÁŘ ============ -->
+<section id="itinerar">
+  <h2>Itinerář den po dni</h2>
+  <div class="days" id="days"></div>
+</section>
+
+<!-- ============ ATRAKCE ============ -->
+<section id="atrakce">
+  <h2>Atrakce: co určitě chceme</h2>
+  <div class="attractions" id="must"></div>
+
+  <h2 class="mt">Tipy navíc pro 9leté kluky</h2>
+  <div class="attractions" id="optional"></div>
+  <p class="small muted">Zavřené v listopadu: Reffen (street food), Bakken, BonBon-Land. Dětské muzeum v Národním muzeu je zavřené od 18. 10. 2026 do léta 2027.</p>
+</section>
+
+<!-- ============ MAPA ============ -->
+<section id="mapa">
+  <h2>Mapa</h2>
+  <div id="map"></div>
+  <p class="small muted"><span class="dot red"></span> povinné <span class="dot blue"></span> tipy navíc <span class="dot dark"></span> ubytování / letiště</p>
+</section>
+
+<!-- ============ ROZPOČET ============ -->
+<section id="rozpocet">
+  <h2>Rozpočet</h2>
+  <div class="controls card pad">
+    <div class="seg" role="group" aria-label="Varianta návratu">
+      <button data-variant="A" class="on">A: návrat Po 16. 11. (3 noci)</button>
+      <button data-variant="B">B: návrat Út 17. 11. (4 noci)</button>
+    </div>
+    <div class="opts" id="opts"></div>
+  </div>
+  <div class="summary" id="summary"></div>
+  <div class="tablewrap"><table class="budget" id="budget"></table></div>
+  <p class="small muted">Jak se náklady dělí: letenky, parkování, palivo a pojištění platí jen tři cestující z Prahy (dospělý 1 + kluci). Ubytování se dělí rovným dílem na 4 osoby. Vstupné, MHD a jídlo jsou podle skutečné ceny pro dospělého a dítě. Druhý dospělý už je v Kodani, jeho cestu tam rozpočet neobsahuje. Ceny jsou v DKK přepočtené kurzem 3,254 Kč. Rezerva 10 % kryje výkyvy cen letenek a ubytování.</p>
+</section>
+
+<!-- ============ REZERVACE ============ -->
+<section id="rezervace">
+  <h2>Co rezervovat a zařídit</h2>
+  <ol class="todo">
+    <li><label><input type="checkbox"> <strong>Letenky</strong>: Norwegian tam, SAS zpět, s kabinovými kufry. <em>Hned, ceny rostou.</em></label></li>
+    <li><label><input type="checkbox"> <strong>Ubytování</strong> s bezplatným stornem. <em>Hned, víkend otevření Tivoli.</em></label></li>
+    <li><label><input type="checkbox"> <strong>Parkování</strong> AeroParking PA Smart / PB Economy online</label></li>
+    <li><label><input type="checkbox"> <strong>Tivoli</strong>: vstup + Turpas pro kluky na sobotu, online (<a target="_blank" rel="noopener" href="https://shop.tivoli.dk">shop.tivoli.dk</a>)</label></li>
+    <li><label><input type="checkbox"> <strong>Den Blå Planet</strong>: časový slot na pondělí 10:00 (online levnější o 30 DKK/dosp.)</label></li>
+    <li><label><input type="checkbox"> <strong>Věž Vor Frelsers Kirke</strong>: slot na neděli 10:00 (<a target="_blank" rel="noopener" href="https://www.vorfrelserskirke.dk/kontakt/taarnet/">vorfrelserskirke.dk</a>)</label></li>
+    <li><label><input type="checkbox"> <strong>ZOO</strong>: vstupenky online (<a target="_blank" rel="noopener" href="https://www.zoo.dk/en">zoo.dk</a>)</label></li>
+    <li><label><input type="checkbox"> Nainstalovat <strong>Rejsebillet</strong> a vyzkoušet nákup. City Pass koupit až na letišti po příletu.</label></li>
+    <li><label><input type="checkbox"> <strong>Doklady pro děti</strong> (vlastní OP nebo pas). Pokud letí jen jeden rodič, doporučuje se <strong>písemný souhlas druhého rodiče</strong> (stačí jednoduchý, ideálně v angličtině).</label></li>
+    <li><label><input type="checkbox"> Kartičky pojišťovny (EHIC) + cestovní pojištění</label></li>
+    <li><label><input type="checkbox"> Online check-in (Norwegian 24 h, SAS 30 h před odletem)</label></li>
+    <li><label><input type="checkbox"> Nepromokavé bundy, čepice, rukavice (i na brusle)</label></li>
+  </ol>
+</section>
+
+<footer class="small muted">
+  <p>Připraveno 17. 10. 2026. Údaje z oficiálních webů atrakcí, dopravců a ČNB. Ceny letenek a ubytování jsou odhady z agregátorů, otevírací doby si těsně před cestou ověřte. Fotografie: <a target="_blank" rel="noopener" href="https://commons.wikimedia.org/">Wikimedia Commons</a> (u každé fotky odkaz na zdroj a licenci). Mapa © <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</p>
+</footer>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
